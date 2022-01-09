@@ -1,0 +1,58 @@
+/* ----------------------- GENERAL STYLES ------------------ */
+:root {
+  --color-primary: #ff4747;
+  --color-secondary: #de2c2c;
+  --color-accent: #e0e01d;
+  --color-heading: #3cde07;
+  --color-paragraphes: #b1b5b1;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  line-height: 1.8;
+}
+/* ----------------------- GENERAL STYLES ------------------ */
+
+/* ----------------------- TYPOGRAPHY STYLES ------------------ */
+h1,
+h2,
+h3 {
+  color: var(--color-heading);
+  margin-bottom: 0; /*Removes the gap between headings*/
+}
+
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 4.2rem;
+}
+h3 {
+  font-size: 3.6rem;
+}
+
+p {
+  color: var(--color-paragraphes);
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.8rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
+/* ----------------------- TYPOGRAPHY STYLES ------------------ */
