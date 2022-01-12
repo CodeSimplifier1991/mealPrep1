@@ -5,6 +5,7 @@
   --color-accent: #8efd6c;
   --color-heading: #3cde07;
   --color-body: #b1b5b1;
+  --color-white: #fff;
 }
 
 html {
@@ -85,3 +86,40 @@ p {
   }
 }
 /* ----------------------- LINKS STYLES ------------------ */
+
+/* ----------------------- DISCOUNT BADGES STYLES ------------------ */
+/* Structure */
+.badge {
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.5rem 2rem; /*V H*/
+  white-space: nowrap;
+}
+/* Structure */
+
+/* Skin */
+.badge--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.badge--secondary {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.badge--small {
+  font-size: 1.6rem;
+}
+/* Skin */
+@media screen and (min-width: 1024px) {
+  .badge {
+    font-size: 1.6rem;
+  }
+
+  .badge--small {
+    font-size: 1.2rem;
+  }
+}
+/* ----------------------- DISCOUNT BADGES STYLES ------------------ */
