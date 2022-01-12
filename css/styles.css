@@ -2,9 +2,9 @@
 :root {
   --color-primary: #ff4747;
   --color-secondary: #de2c2c;
-  --color-accent: #e0e01d;
+  --color-accent: #8efd6c;
   --color-heading: #3cde07;
-  --color-paragraphes: #b1b5b1;
+  --color-body: #b1b5b1;
 }
 
 html {
@@ -13,7 +13,13 @@ html {
 
 body {
   font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
   line-height: 1.8;
+  color: var(--color-body);
+}
+
+a {
+  text-decoration: none; /*Removes the underline line*/
 }
 /* ----------------------- GENERAL STYLES ------------------ */
 
@@ -22,37 +28,60 @@ h1,
 h2,
 h3 {
   color: var(--color-heading);
-  margin-bottom: 0; /*Removes the gap between headings*/
+  margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 7rem;
 }
 h2 {
-  font-size: 4.2rem;
+  font-size: 4rem;
 }
 h3 {
-  font-size: 3.6rem;
+  font-size: 3rem;
 }
 
 p {
-  color: var(--color-paragraphes);
-  font-size: 1.8rem;
   margin-top: 0;
 }
 
 @media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
   h1 {
-    font-size: 3rem;
+    font-size: 8rem;
   }
   h2 {
-    font-size: 2.8rem;
+    font-size: 3.5rem;
   }
   h3 {
-    font-size: 2rem;
-  }
-  p {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
   }
 }
 /* ----------------------- TYPOGRAPHY STYLES ------------------ */
+
+/* ----------------------- LINKS STYLES ------------------ */
+.link-arrow {
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.link-arrow::after {
+  content: '-->';
+  margin-left: 5px;
+  transition: margin 0.15s;
+}
+
+.link-arrow:hover::after {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
+  }
+}
+/* ----------------------- LINKS STYLES ------------------ */
