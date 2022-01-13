@@ -6,6 +6,8 @@
   --color-heading: #3cde07;
   --color-body: #b1b5b1;
   --color-white: #fff;
+  --color-border: #ccc;
+  --border-radius: 30px;
 }
 
 *,
@@ -256,3 +258,45 @@ p {
   }
 }
 /* ----------------------- BUTTONS STYLES ------------------ */
+
+/* ----------------------- INPUT STYLES ------------------ */
+/* Structure */
+.input {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  color: var(--color-heading);
+  font-size: 2rem;
+  outline: 0; /*Removes the border applied by the browsers*/
+  padding: 1.5rem 3.5rem; /*V H*/
+}
+/* Structure */
+
+::placeholder {
+  color: #cdcbd7;
+}
+
+.input-group {
+  border: 1px solid var(--color-border);
+  display: flex;
+}
+
+/* If we have an input class inside the 
+input-group, the style will apply */
+.input-group .input {
+  border: 0;
+  padding: 1.5rem 1rem; /*V H*/
+  flex-grow: 1; /*Expands the width of the input*/
+}
+
+/* If we have a button inside the input-group
+the style will apply */
+.input-group .btn {
+  margin: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 1.5rem;
+  }
+}
+/* ----------------------- INPUT STYLES ------------------ */
