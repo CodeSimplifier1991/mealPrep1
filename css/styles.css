@@ -8,6 +8,12 @@
   --color-white: #fff;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box; /*Border box sizes the items internaly*/
+}
+
 html {
   font-size: 62.5%;
 }
@@ -184,3 +190,69 @@ p {
 }
 /* Skin */
 /* ----------------------- SVG ICONS STYLES ------------------ */
+
+/* ----------------------- BUTTONS STYLES ------------------ */
+/* Structure */
+.btn {
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0; /*V H*/
+  padding: 2rem 3rem; /*V H*/
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+/* Structure */
+
+/* Skin */
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn--primary:hover {
+  background: orange;
+  color: var(--color-white);
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.btn--secondary:hover {
+  background: red;
+  color: var(--color-white);
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+.btn--accent:hover {
+  background: green;
+  color: var(--color-white);
+}
+
+.btn--outline {
+  background: var(--color-white);
+  color: var(--color-heading);
+  border: 2px solid var(--color-heading);
+}
+
+.btn--outline:hover {
+  background: var(--color-heading);
+  color: var(--color-white);
+}
+/* Skin */
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
+}
+/* ----------------------- BUTTONS STYLES ------------------ */
