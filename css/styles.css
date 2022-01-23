@@ -1,8 +1,8 @@
 /* ----------------------- GENERAL STYLES ------------------ */
 :root {
   --color-primary: #ff4747;
-  --color-secondary: #de2c2c;
-  --color-accent: #8efd6c;
+  --color-secondary: #ff7b00;
+  --color-accent: #77f850;
   --color-heading: #3cde07;
   --color-body: #b1b5b1;
   --color-white: #fff;
@@ -119,6 +119,7 @@ p {
 
 .badge--small {
   font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
 }
 /* Skin */
 @media screen and (min-width: 1024px) {
@@ -240,6 +241,11 @@ p {
   color: var(--color-white);
 }
 
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+
 .btn--outline {
   background: var(--color-white);
   color: var(--color-heading);
@@ -300,3 +306,84 @@ the style will apply */
   }
 }
 /* ----------------------- INPUT STYLES ------------------ */
+
+/* ----------------------- CARD STYLES ------------------ */
+/* Structure */
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+}
+/* Structure */
+
+/* Skin */
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+
+.card--primary .card__header {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.card--secondary .card__header {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.card--accent .card__header {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+.plan__name {
+  color: var(--color-white);
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.plan__price {
+  font-size: 6rem;
+}
+
+.plan__billing-cycle {
+  font-size: 2.4rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-right: 1rem;
+}
+
+.plan__description {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.plan .list__item {
+  margin-bottom: 2rem;
+}
+/* Skin */
+
+/* Media */
+@media screen and (min-width: 1024px) {
+  .plan__name {
+    font-size: 1.4rem;
+  }
+
+  .plan__price {
+    font-size: 5rem;
+  }
+
+  .plan__billing-cycle {
+    font-size: 1.6rem;
+  }
+
+  .plan__description {
+    font-size: 1.7rem;
+  }
+}
+/* Media */
+/* ----------------------- CARD STYLES ------------------ */
