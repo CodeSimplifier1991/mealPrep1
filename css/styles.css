@@ -225,6 +225,11 @@ p {
 /* Structure */
 
 /* Skin */
+.btn--streched {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
 .btn--primary {
   background: var(--color-primary);
   color: var(--color-white);
@@ -528,3 +533,50 @@ the style will apply */
   right: -32px;
 }
 /* ----------------------- TESTIMONIAL STYLES ------------------ */
+
+/* ----------------------- CALLOUT STYLES ------------------ */
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+
+.callout--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.callout__content {
+  text-align: center;
+}
+
+.callout__heading {
+  color: var(--color-white);
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.callout .btn {
+  align-self: center; /*Align vertically*/
+  justify-self: center; /*Align horizentally*/
+}
+
+/* Media */
+@media screen and (min-width: 768px) {
+  .callout .grid--1x2 {
+    /* The second column takes enough space to 
+    contain its item (btn) the rest of the 
+    speace will be allocated to the first column */
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout .btn {
+    justify-self: start;
+    margin: 0 2rem;
+  }
+}
+/* Media */
+/* ----------------------- CALLOUT STYLES ------------------ */
