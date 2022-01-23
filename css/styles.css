@@ -403,3 +403,21 @@ the style will apply */
 }
 /* Media */
 /* ----------------------- CARD STYLES ------------------ */
+
+/* ----------------------- MEDIA STYLES ------------------ */
+.media {
+  display: flex;
+}
+
+.media__image {
+  margin-top: 1rem;
+}
+
+.media__body {
+  margin: 0 2rem;
+}
+
+.media__title {
+  margin-top: 0;
+}
+/* ----------------------- MEDIA STYLES ------------------ */
