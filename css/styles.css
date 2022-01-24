@@ -653,3 +653,75 @@ the style will apply */
   margin: 0 auto;
 }
 /* ----------------------- BLOCK STYLES ------------------ */
+
+/* ----------------------- NAV STYLES ------------------ */
+.nav {
+  align-items: center;
+  background: #000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+/* The list */
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+/* The list */
+
+/* The list items */
+.nav__item {
+  padding: 0.5rem 2rem; /*V H*/
+  border-bottom: 1px solid #222;
+}
+
+.nav__item > a {
+  color: #d2d0db;
+  transition: color 0.3s;
+}
+
+.nav__item > a:hover {
+  color: #fff;
+}
+/* The list items */
+
+/* The menu icon */
+.nav__toggler {
+  opacity: 0.5;
+  transition: box-shadow 0.15s;
+  cursor: pointer;
+}
+/* The menu icon */
+
+.nav.collapsible--expanded .nav__toggler {
+  opacity: 1;
+  box-shadow: 0 0 0 2px #666;
+  border-radius: 5px;
+}
+
+.nav__brand {
+  transform: translateY(5px);
+}
+
+/* media */
+@media screen and (min-width: 768px) {
+  .nav__toggler {
+    display: none; /*Hides the menu icon in big screens*/
+  }
+
+  .nav__list {
+    display: flex; /*Spreads out the items*/
+    font-size: 1.6rem;
+    max-height: 100%;
+    opacity: 1;
+    width: auto;
+  }
+
+  .nav__item {
+    border: 0;
+  }
+}
+/* media */
+/* ----------------------- NAV STYLES ------------------ */
