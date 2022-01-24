@@ -39,6 +39,7 @@ h2,
 h3 {
   color: var(--color-heading);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 h1 {
@@ -725,3 +726,39 @@ the style will apply */
 }
 /* media */
 /* ----------------------- NAV STYLES ------------------ */
+
+/* ----------------------- HERO (BANNER) STYLES ------------------ */
+/* The sentence */
+.hero__tagline {
+  font-size: 2rem;
+  color: #b9c3cf;
+  letter-spacing: 1px;
+  margin: 2rem 0 5rem;
+}
+/* The sentence */
+
+/* The banner image */
+.hero__image {
+  width: 100%;
+}
+/* The banner image */
+
+/* Adjust the skewed */
+.hero {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+/* Adjust the skewed */
+
+/* Media */
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 0;
+  }
+
+  .hero__content {
+    text-align: left;
+    align-self: center; /*ALigns with center vertically*/
+  }
+}
+/* Media */
+/* ----------------------- HERO (BANNER) STYLES ------------------ */
