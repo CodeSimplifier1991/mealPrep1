@@ -341,6 +341,10 @@ the style will apply */
 
 /* ----------------------- CARD STYLES ------------------ */
 /* Structure */
+.plan {
+  transition: transform 0.2s ease-out;
+}
+
 .card {
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #f3f3f3;
@@ -354,9 +358,17 @@ the style will apply */
   padding: 2rem 3rem;
 }
 
+.plan--popular {
+  transform: scale(1.1);
+}
+
 .card--primary .card__header {
   background: var(--color-primary);
   color: var(--color-white);
+}
+
+.card--primary .badge--primary {
+  background: #126de4;
 }
 
 .card--secondary .card__header {
@@ -412,8 +424,15 @@ the style will apply */
   top: -1px;
   right: 5%;
 }
-
 /* Skin */
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.12);
+}
 
 /* Media */
 @media screen and (min-width: 1024px) {
@@ -806,3 +825,14 @@ the style will apply */
 }
 /* Media */
 /* ----------------------- DOMAIN BLOCKS STYLES ------------------ */
+
+/* ----------------------- PLAN BLOCKS STYLES ------------------ */
+.block--plans .grid {
+  gap: 8rem 5rem;
+}
+
+.block--plans .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+/* ----------------------- PLAN BLOCKS STYLES ------------------ */
