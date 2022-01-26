@@ -219,6 +219,7 @@ p {
   font-weight: 600;
   margin: 1rem 0; /*V H*/
   padding: 2rem 3rem; /*V H*/
+  outline: 0; /*Removes the border applied by the browser*/
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -276,6 +277,13 @@ p {
   background: var(--color-heading);
   color: var(--color-white);
 }
+
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
 /* Skin */
 
 @media screen and (min-width: 1024px) {
@@ -286,7 +294,7 @@ p {
 /* ----------------------- BUTTONS STYLES ------------------ */
 
 /* ----------------------- INPUT STYLES ------------------ */
-/* Structure */
+/* Individual Input */
 .input {
   border-radius: var(--border-radius);
   border: 1px solid var(--color-border);
@@ -300,31 +308,35 @@ p {
 ::placeholder {
   color: #cdcbd7;
 }
-
-.input-group {
-  border: 1px solid var(--color-border);
-  display: flex;
-}
-
-/* If we have an input class inside the 
-input-group, the style will apply */
-.input-group .input {
-  border: 0;
-  padding: 1.5rem 1rem; /*V H*/
-  flex-grow: 1; /*Expands the width of the input*/
-}
-
-/* If we have a button inside the input-group
-the style will apply */
-.input-group .btn {
-  margin: 4px;
-}
-
 @media screen and (min-width: 1024px) {
   .input {
     font-size: 1.5rem;
   }
+  /* Individual Input */
+
+  /* Input-Groups */
+  .input-group {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    display: flex;
+  }
+
+  /* If we have an input class inside the 
+input-group, the style will apply */
+  .input-group .input {
+    border: 0;
+    padding: 1.5rem 2rem; /*V H*/
+    flex-grow: 1; /*Expands the width of the input*/
+  }
+
+  /* If we have a button inside the input-group
+the style will apply */
+  .input-group .btn {
+    margin: 4px;
+  }
 }
+/* Input-Groups */
+
 /* ----------------------- INPUT STYLES ------------------ */
 
 /* ----------------------- CARD STYLES ------------------ */
@@ -762,3 +774,35 @@ the style will apply */
 }
 /* Media */
 /* ----------------------- HERO (BANNER) STYLES ------------------ */
+
+/* ----------------------- DOMAIN BLOCKS STYLES ------------------ */
+.block-domain .input-group {
+  box-shadow: 0 0 30px 10px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block-domain__prices {
+  display: grid;
+  font-size: 2rem;
+  font-weight: 600;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 1000;
+}
+
+.block-domain__list {
+  word-wrap: nowrap;
+}
+
+/* Media */
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+/* Media */
+/* ----------------------- DOMAIN BLOCKS STYLES ------------------ */
