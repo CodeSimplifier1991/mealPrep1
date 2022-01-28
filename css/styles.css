@@ -667,6 +667,7 @@ the style will apply */
 
 .block__header {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .block__heading {
