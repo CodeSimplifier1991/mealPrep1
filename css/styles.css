@@ -836,3 +836,30 @@ the style will apply */
   margin: 0 auto;
 }
 /* ----------------------- PLAN BLOCKS STYLES ------------------ */
+
+/* ----------------------- FEATURE BLOCKS STYLES ------------------ */
+.feature {
+  gap: 4rem 2rem; /*Rows Columns*/
+  margin: 12rem 0; /*V H*/
+}
+
+.feature__heading {
+  margin: 1rem 0;
+}
+
+.feature__image {
+  width: 100%; /*This value makes the image responsive*/
+}
+
+.feature:first-of-type {
+  margin: 6rem;
+}
+
+/* Media */
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
+}
+/* Media */
+/* ----------------------- FEATURE BLOCKS STYLES ------------------ */
