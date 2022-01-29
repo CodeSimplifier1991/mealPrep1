@@ -20,8 +20,7 @@
 html {
   font-size: 62.5%;
 }
-
-body {
+i body {
   font-family: 'Inter', Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
   line-height: 1.8;
@@ -224,7 +223,7 @@ p {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1rem 0; /*V H*/
-  padding: 2rem 3rem; /*V H*/
+  padding: 2rem 4vw; /*V H*/
   outline: 0; /*Removes the border applied by the browser*/
   text-align: center;
   text-transform: uppercase;
@@ -314,36 +313,32 @@ p {
 ::placeholder {
   color: #cdcbd7;
 }
+
 @media screen and (min-width: 1024px) {
   .input {
     font-size: 1.5rem;
   }
-  /* Individual Input */
-
-  /* Input-Groups */
-  .input-group {
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
-    display: flex;
-  }
-
-  /* If we have an input class inside the 
-input-group, the style will apply */
-  .input-group .input {
-    border: 0;
-    padding: 1.5rem 2rem; /*V H*/
-    flex-grow: 1; /*Expands the width of the input*/
-  }
-
-  /* If we have a button inside the input-group
-the style will apply */
-  .input-group .btn {
-    margin: 4px;
-  }
 }
-/* Input-Groups */
-
 /* ----------------------- INPUT STYLES ------------------ */
+
+/* ----------------------- INPUT GROUP STYLES ------------------ */
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+  width: 0; /*If we don't define this, the input grows out of input-group*/
+}
+
+.input-group .btn {
+  margin: 4px;
+}
+/* ----------------------- INPUT GROUP STYLES ------------------ */
 
 /* ----------------------- CARD STYLES ------------------ */
 /* Structure */
@@ -807,10 +802,11 @@ the style will apply */
 }
 
 .block-domain__prices {
+  color: var(--color-heading);
   display: grid;
   font-size: 2rem;
   font-weight: 600;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   justify-items: center;
   margin: 0 auto;
