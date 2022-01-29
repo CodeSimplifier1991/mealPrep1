@@ -572,6 +572,9 @@ p {
 .callout {
   padding: 4rem;
   border-radius: 5px;
+  max-width: 740px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .callout--primary {
