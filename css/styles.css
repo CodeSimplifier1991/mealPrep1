@@ -813,11 +813,10 @@ p {
   grid-template-rows: repeat(2, 6rem);
   justify-items: center;
   margin: 0 auto;
-  max-width: 1000;
 }
 
 .block-domain__list {
-  word-wrap: nowrap;
+  overflow-wrap: nowrap;
 }
 
 /* Media */
